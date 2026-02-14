@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float m1, m2, m3, average;
+
+    // Taking input
+    cout << "Enter marks of three students: ";
+    cin >> m1 >> m2 >> m3;
+
+    // Calculating average
+    average = (m1 + m2 + m3) / 3;
+
+    // Displaying result
+    cout << "Average marks = " << average;
+
+    return 0;
+}
