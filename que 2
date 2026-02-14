@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float radius, area;
+    const float PI = 3.14;
+
+    // Taking input
+    cout << "Enter the radius of the fountain: ";
+    cin >> radius;
+
+    // Calculating area
+    area = PI * radius * radius;
+
+    // Displaying result
+    cout << "Area of the circular fountain = " << area;
+
+    return 0;
+}
