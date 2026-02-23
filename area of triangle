@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+class Triangle {
+private:
+    float base, height;
+
+public:
+    // Constructor
+    Triangle(float b, float h) {
+        base = b;
+        height = h;
+    }
+
+    // Function to calculate area
+    void area() {
+        float result = 0.5 * base * height;
+        cout << "Area of the triangle = " << result << endl;
+    }
+};
+
+int main() {
+    float b, h;
+
+    cout << "Enter base of triangle: ";
+    cin >> b;
+
+    cout << "Enter height of triangle: ";
+    cin >> h;
+
+    // Creating object and calling constructor
+    Triangle t(b, h);
+
+    // Calling member function
+    t.area();
+
+    return 0;
+}
