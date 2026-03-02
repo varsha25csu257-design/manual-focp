@@ -1,0 +1,54 @@
+#include <iostream>
+using namespace std;
+
+class BankAccount {
+    string accountHolderName;
+    double balance;
+    int rewardPoints;
+
+public:
+    // Parameterized constructor
+    BankAccount(string name, double bal, int points) {
+        accountHolderName = name;
+        balance = bal;
+        rewardPoints = points;
+    }
+
+    // Withdraw function
+    void withdraw() {
+        balance = balance - 500;
+        rewardPoints = rewardPoints - 20;
+    }
+
+    // Display function
+    void displayAccount() {
+        cout << "\nUpdated Account Details:\n";
+        cout << "Account Holder Name: " << accountHolderName << endl;
+        cout << "Balance: " << balance << endl;
+        cout << "Reward Points: " << rewardPoints << endl;
+    }
+};
+
+int main() {
+    string name;
+    double bal;
+    int points;
+
+    // User input
+    cout << "Enter Account Holder Name: ";
+    cin >> name;
+
+    cout << "Enter Balance: ";
+    cin >> bal;
+
+    cout << "Enter Reward Points: ";
+    cin >> points;
+
+    // Creating object using user input
+    BankAccount obj(name, bal, points);
+
+    obj.withdraw();
+    obj.displayAccount();
+
+    return 0;
+}
